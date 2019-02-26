@@ -1,3 +1,44 @@
-<p>
-  pogress works!
-</p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-title">
+                Barra de progreso.
+            </div>
+            <div class="card-body">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" [attr.ariavaluemax]="total" [attr.ariaValuenow]="porcentaje" [style.width]="porcentaje + '%'"></div>
+                </div>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuemin="0" [attr.ariavaluemax]="total" [attr.ariaValuenow]="porcentaje1" [style.width]="porcentaje1 + '%'"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+
+                <app-incrementador (cambioValor)="porcentaje=$event" leyenda="Progres azul" [porcentaje]=porcentaje></app-incrementador>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+
+            <div class="card-body">
+
+
+                <app-incrementador (cambioValor)="porcentaje1=$event" leyenda="Progres amarillo" [porcentaje]=porcentaje1></app-incrementador>
+
+
+            </div>
+        </div>
+    </div>
+</div>

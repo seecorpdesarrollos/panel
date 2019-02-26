@@ -8,6 +8,8 @@ import { sharedModule } from "../shared/shared.module";
 
 //rutas hijas
 import { PAGES_ROUTES } from "./pages.routes";
+import { FormsModule } from "@angular/forms";
+import { IncrementadorComponent } from "../components/incrementador/incrementador.component";
 
 
 
@@ -18,18 +20,22 @@ import { PAGES_ROUTES } from "./pages.routes";
       PagesComponent,
       DashboardComponent,
       ProgressComponent,
-      Graficas1Component
+      Graficas1Component,
+      IncrementadorComponent
     ],
 
     exports:[
-        PagesComponent,
-        DashboardComponent,
+      PagesComponent,
+      DashboardComponent,
       ProgressComponent,
-      Graficas1Component
+      Graficas1Component,
+      IncrementadorComponent
+
     ],
-  imports:[
+    imports:[
       sharedModule,
-      PAGES_ROUTES
+      PAGES_ROUTES,
+      FormsModule
   ]
 
 

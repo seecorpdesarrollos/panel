@@ -4,6 +4,9 @@ import { HeaderComponent } from "./header/header.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { NopagefoundComponent } from "./nopagefound/nopagefound.component";
 
+//rutas
+import { PAGES_ROUTES } from "../pages/pages.routes";
+
 
 
 
@@ -22,6 +25,8 @@ import { NopagefoundComponent } from "./nopagefound/nopagefound.component";
      SidebarComponent,
      NopagefoundComponent
     ],
+
+    imports: [PAGES_ROUTES],
 })
 
 export class sharedModule {}
